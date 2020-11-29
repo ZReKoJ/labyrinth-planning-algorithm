@@ -226,7 +226,7 @@ function settingPanel(div) {
 
     let dataSelect = setting.find(".data");
     dataSelect.on("change", (e) => {
-        $(".draw-panel").empty();
+        //$(".draw-panel").empty();
         getData(dataSelect.val());
     });
 }
@@ -235,7 +235,7 @@ function loadDataFile(link, callback) {
     let request = new XMLHttpRequest();
     request.onreadystatechange = () => {
         if (request.readyState == 4) {
-            callback(parseData(request.responseText));
+            callback(request.responseText);
         }
     };
     request.open("GET", link, true);
@@ -243,8 +243,7 @@ function loadDataFile(link, callback) {
 }
 
 function getData(filename) {
-    loadDataFile("https://zrekoj.github.io/labyrinth-planning-algorithm/resources/" + filename + ".png", (parsedData) => {
-        data = parsedData;
+    loadDataFile("https://zrekoj.github.io/labyrinth-planning-algorithm/resources/" + filename + ".png", (data) => {
         console.log(data)
     });
 }
