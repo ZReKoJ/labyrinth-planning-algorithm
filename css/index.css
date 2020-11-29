@@ -1,0 +1,147 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: var(--surface-color);
+}
+
+.setting-panel {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-light-color);
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+.setting-panel>.setting {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    right: 5px;
+    width: calc(100% - 10px);
+    max-height: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.setting-panel>.setting>.box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: calc(50% - 10px);
+    min-width: 450px;
+    height: 30px;
+    overflow: hidden;
+    margin: 0 5px 5px 5px;
+}
+
+.setting-panel>.setting>.box * {
+    height: 30px;
+}
+
+.setting-panel>.setting>.box label {
+    margin-right: 3px;
+    color: var(--on-primary-color);
+}
+
+.setting-panel>.setting>.box .space {
+    width: 5px;
+}
+
+.setting-panel>.setting>.box button {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+
+.setting-panel>.setting>.box input[type="file"] {
+    color: var(--on-primary-color);
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.setting-panel>.setting>.box input[type="number"] {
+    font-weight: bold;
+    height: 80%;
+    padding: 0 5px 0 5px;
+    border: none;
+    flex-grow: 100;
+    color: var(--on-secondary-color);
+    background-color: var(--secondary-color);
+}
+
+.setting-panel>.setting::-webkit-scrollbar {
+    width: 10px;
+}
+
+.setting-panel>.setting::-webkit-scrollbar-track {
+    background: var(--primary-color);
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.setting-panel>.setting::-webkit-scrollbar-thumb {
+    background: var(--primary-dark-color);
+    border-radius: 5px;
+}
+
+.setting-panel>.setting::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to right, var(--primary-color) , var(--primary-dark-color));
+}
+
+.setting-panel>.setting>* {
+    height: 30px;
+}
+
+.setting-panel>.resizer#top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-dark-color);
+}
+
+.setting-panel>.setting>.box select {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    height: 100%;
+}
+
+.map-panel {
+    flex-grow: 100;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
+.draw-panel {
+    flex-grow: 100;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--secondary-light-color);
+    overflow: hidden;
+}
+
+.draw-panel>canvas {
+    cursor: crosshair;
+}

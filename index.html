@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Planning Algorithm</title>
+    <meta charset="utf-8" />
+    <!--
+    <link rel="icon" href="./resources/cv.png" />
+    -->
+    <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- JQuery -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <!-- Draw in 3D library -->
+    <script src="./js/three.min.js"></script>
+    <!-- On resize listener library -->
+    <script src="./js/resize-sensor.js"></script>
+    <script src="./js/config.js"></script>
+    <!-- String data messages -->
+    <script src="./js/messages.js"></script>
+    <!-- My own functions -->
+    <script src="./js/utils.js"></script>
+    <!-- mesh -->
+    <script src="./js/mesh.js"></script>
+    <!-- snake -->
+    <!-- <script src="./js/snake.js"></script> -->
+    <!-- for drawing -->
+    <script src="./js/scene.js"></script>
+    <!-- a search algorithm -->
+    <script src="./js/algorithm.js"></script>
+    <!-- controller for the app -->
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav-bar">
+                <input type="checkbox" class="button" value="Menu">
+                <ul class="menu">
+                    <li class="algorithms-links">
+                        <a href="./index.html">Algoritmos &#65516</a>
+                        <ul class="hidden-menu">
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./html/doc.html">Documentación &#65516</a>
+                        <ul class="hidden-menu">
+                            <li><a href="./html/doc.html#description">Descripción</a></li>
+                            <li><a href="./html/doc.html#contributors">Integrantes</a></li>
+                            <li><a href="./html/doc.html#comments">Comentarios</a></li>
+                            <li><a href="./html/doc.html#views">Vistas</a></li>
+                            <li><a href="./html/doc.html#resources">Recursos</a></li>
+                            <li><a href="./html/doc.html#tools">Herramientas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://zrekoj.github.io/CV/">Zihao</a></li>
+                </ul>
+                <div class="notification-panel">
+                    <span id="notification"></span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="map-panel">
+                <div class="draw-panel">
+                    <canvas></canvas>
+                </div>
+            </div>
+            <div class="setting-panel">
+                <div class="setting">
+                    <div class="box">
+                        <button class="button resize">Reset</button>
+                        <div class="space"></div>
+                        <button class="button perspective">Vista Perspectiva</button>
+                        <div class="space"></div>
+                        <button class="button state">Ejecutar</button>
+                    </div>
+                    <div class="box">
+                        <div>
+                            <label>Laberinto:</label>
+                            <select class="data">
+                                <option value="labyrinth_1" selected>lab1</option>
+                                <option value="labyrinth_2">lab2</option>
+                                <option value="labyrinth_3">lab3</option>
+                                <option value="labyrinth_4">lab4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div>
+                            <label>Zoom:</label>
+                            <input class="mouse-scroll" type="number" value="1" min="1" max="100">
+                        </div>
+                        <div class="space"></div>
+                        <div>
+                            <label>Desplazamiento:</label>
+                            <input class="camera-look-at" type="number" value="1" min="1" max="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="resizer" id='top'></div>
+            </div>
+        </div>
+    </div>
+</body>
